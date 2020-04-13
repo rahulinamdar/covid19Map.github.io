@@ -1,0 +1,26 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core" xmlns:l="sap.ui.layout" xmlns:f="sap.ui.layout.form">
+	<ResponsivePopover title="{country}" contentWidth="25%" placement="Auto">
+		<f:SimpleForm id="SimpleFormDisplay354" editable="false" layout="ResponsiveGridLayout" labelSpanXL="6" labelSpanL="6" labelSpanM="6"
+			labelSpanS="6" adjustLabelSpan="false" emptySpanXL="3" emptySpanL="3" emptySpanM="3" emptySpanS="0" columnsXL="1" columnsL="1" columnsM="1"
+			singleContainerFullSize="false">
+			<f:content>
+				<Label text="Total Cases"/>
+				<Text text="{cases}"/>
+				<Label text="New Cases"/>
+				<Text text="{todayCases}"/>
+				<Label text="Total Deaths"/>
+				<Text text="{deaths}"/>
+				<Label text="New Deaths"/>
+				<Text text="{todayDeaths}"/>
+				<Label text="Recovered"/>
+				<Text text="{recovered}"/>
+				<Label text="Active Cases"/>
+				<Text text="{active}"/>
+				<Label text="Critical"/>
+				<Text text="{critical}"/>
+				<Label text="Total Test Done"/>
+				<Text text="{tests}"/>
+			</f:content>
+		</f:SimpleForm>
+	</ResponsivePopover>
+</core:FragmentDefinition>
