@@ -15,3 +15,4 @@ AppVariantPreviewPayload.zip
 mergedManifestDescriptor.json
 preview.json
 cp.project.properties.json
+/dist/

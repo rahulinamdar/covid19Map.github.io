@@ -1,0 +1,63 @@
+<mvc:View controllerName="com.rahul.covid19-map.controller.View1" xmlns:mvc="sap.ui.core.mvc" displayBlock="true" xmlns="sap.m"
+	xmlns:core="sap.ui.core" xmlns:vbm="sap.ui.vbm" xmlns:vk="sap.ui.vk" xmlns:dnd="sap.ui.core.dnd">
+	<Shell id="shell">
+		<App id="app">
+			<pages>
+				<Page id="page" title="{i18n>title}">
+					<content>
+						<vk:MapContainer autoAdjustHeight="true">
+							<vk:content>
+								<vk:ContainerContent title="Geographic Map" icon="sap-icon://map-2">
+									<vk:content>
+										<vbm:GeoMap id="idGeoMap" drop="onDrop" initialZoom="2" initialPosition="37.52633333206177;12.963101322467267;0.0">
+											<vbm:vos>
+												<vbm:Circles items="{/}" click="onClickItem" contextMenu="onContextMenuItem">
+													<vbm:Circle position="{countryInfo/long};{countryInfo/lat};0" tooltip="{country}" radius="{ path:'cases', formatter:'.formatRadius' }"
+														color="rgba(92,186,230,0.6)" colorBorder="rgb(255,255,255)" hotDeltaColor="rgba(92,186,230,0.8)" click="onClickCircle"
+														contextMenu="onContextMenuCircle"/>
+												</vbm:Circles>
+												<vbm:Containers items="{/}" click="onClickItem" contextMenu="onContextMenuItem">
+													<vbm:Container position="{countryInfo/long};{countryInfo/lat};0" tooltip="{country}" click="onClickItem" contextMenu="onContextMenuItem">
+														<vbm:item>
+															<Button icon="sap-icon://accidental-leave" type="{
+																path:'cases',
+																formatter:'.formatDesign'
+															}" text="{cases}" press="onClickButton"/>
+														</vbm:item>
+													</vbm:Container>
+												</vbm:Containers>
+											</vbm:vos>
+										</vbm:GeoMap>
+									</vk:content>
+								</vk:ContainerContent>
+								<vk:ContainerContent title="Analytical Map" icon="sap-icon://choropleth-chart">
+									<vk:content>
+										<vbm:AnalyticMap id="idAnalyticalMap" drop="onDrop" initialZoom="2" initialPosition="37.52633333206177;12.963101322467267;0.0">
+											<vbm:vos>
+												<vbm:Circles items="{/}" click="onClickItem" contextMenu="onContextMenuItem">
+													<vbm:Circle position="{countryInfo/long};{countryInfo/lat};0" tooltip="{country}" radius="{ path:'cases', formatter:'.formatRadius' }"
+														color="rgba(92,186,230,0.6)" colorBorder="rgb(255,255,255)" hotDeltaColor="rgba(92,186,230,0.8)" click="onClickCircle"
+														contextMenu="onContextMenuCircle"/>
+												</vbm:Circles>
+												<vbm:Containers items="{/}" click="onClickItem" contextMenu="onContextMenuItem">
+													<vbm:Container position="{countryInfo/long};{countryInfo/lat};0" tooltip="{country}" click="onClickItem" contextMenu="onContextMenuItem">
+														<vbm:item>
+															<Button icon="sap-icon://accidental-leave" type="{
+																path:'cases',
+																formatter:'.formatDesign'
+															}" text="{cases}" press="onClickButton"/>
+														</vbm:item>
+													</vbm:Container>
+												</vbm:Containers>
+											</vbm:vos>
+										</vbm:AnalyticMap>
+									</vk:content>
+								</vk:ContainerContent>
+							</vk:content>
+						</vk:MapContainer>
+					</content>
+				</Page>
+			</pages>
+		</App>
+	</Shell>
+</mvc:View>
