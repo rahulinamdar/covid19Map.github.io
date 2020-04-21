@@ -15,7 +15,7 @@
         },
         "dataSources": {
             "personal_info": {
-                "uri": "https://corona.lmao.ninja/countries?sort=cases",
+                "uri": "https://corona.lmao.ninja/v2/countries?sort=cases",
                 "type": "JSON"
             }
         }

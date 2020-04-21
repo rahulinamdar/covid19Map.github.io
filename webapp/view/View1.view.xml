@@ -19,10 +19,7 @@
 												<vbm:Containers items="{/}" click="onClickItem" contextMenu="onContextMenuItem">
 													<vbm:Container position="{countryInfo/long};{countryInfo/lat};0" tooltip="{country}" click="onClickItem" contextMenu="onContextMenuItem">
 														<vbm:item>
-															<Button icon="sap-icon://accidental-leave" type="{
-																path:'cases',
-																formatter:'.formatDesign'
-															}" text="{cases}" press="onClickButton"/>
+															<Button icon="sap-icon://accidental-leave" type="{ path:'cases', formatter:'.formatDesign' }" text="{cases}" press="onClickButton"/>
 														</vbm:item>
 													</vbm:Container>
 												</vbm:Containers>
@@ -42,10 +39,7 @@
 												<vbm:Containers items="{/}" click="onClickItem" contextMenu="onContextMenuItem">
 													<vbm:Container position="{countryInfo/long};{countryInfo/lat};0" tooltip="{country}" click="onClickItem" contextMenu="onContextMenuItem">
 														<vbm:item>
-															<Button icon="sap-icon://accidental-leave" type="{
-																path:'cases',
-																formatter:'.formatDesign'
-															}" text="{cases}" press="onClickButton"/>
+															<Button icon="sap-icon://accidental-leave" type="{ path:'cases', formatter:'.formatDesign' }" text="{cases}" press="onClickButton"/>
 														</vbm:item>
 													</vbm:Container>
 												</vbm:Containers>
